@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form-wrapper sign-in">
+        <form action="">
+          <h2>Sign up</h2>
+
+          <div class="input-group">
+            <input class="entry-user-name" type="text" required />
+            <label for="">Username</label>
+          </div>
+
+          <div class="input-group">
+            <input class="email" type="email" required />
+            <label for="">email</label>
+          </div>
+
+          <div class="input-group">
+            <input class="entry-password" type="password" required />
+            <label for="">password</label>
+          </div>
+
+          <div class="remember">
+            <label for="">
+              <input type="checkbox" class="agree-terms" />I agree to the terms
+              and account</label
+            >
+          </div>
+
+          <button type="button" class="sign-up-btn">Sign Up</button>
+          <div class="signUp-link">
+            <p>
+              Already have an account?
+              <a href="#" class="signInBtn-link">Sign In</a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="form-wrapper sign-up">
+        <form action="">
+          <h2>Login</h2>
+
+          <div class="input-group">
+            <input class="user-name" type="text" required />
+            <label for="">Username</label>
+          </div>
+
+          <div class="input-group">
+            <input class="password" type="password" required />
+            <label for="">password</label>
+          </div>
+
+          <div class="remember">
+            <label class="" for="">
+              <input class="remember-me" type="checkbox" />Remember me
+            </label>
+          </div>
+
+          <button class="log-in" type="button">login</button>
+          <div class="signUp-link">
+            <p>
+              Dont have an account?
+              <a href="#" class="signUpBtn-link">Sign Up</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="remember-box">
+      <div class="remebr-container">
+        <div class="reminder-name">
+          <h4>user name & password</h4>
+          <div class="r-name"><span>Name :</span> <span>soghra</span></div>
+          <div class="r-password"><span>password :</span> <span>$$$</span></div>
+          <button class="got-it">got it</button>
+        </div>
+
+        <div class="lock">
+          <img src="./assets/img/lock-img.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- gallery paart -->
+    <div class="hero">
+      <div class="name"></div>
+
+      <div class="container" id="container">
+        <span style="--i: 1"><img src="./assets/img/nature.jpg" alt="" /></span>
+        <span style="--i: 2"
+          ><img src="./assets/img/nature2.jpg" alt=""
+        /></span>
+        <span style="--i: 3"
+          ><img src="./assets/img/nature3.jpg" alt=""
+        /></span>
+        <span style="--i: 4"
+          ><img src="./assets/img/nature4.jpg" alt=""
+        /></span>
+        <span style="--i: 5"
+          ><img src="./assets/img/nature5.jpg" alt=""
+        /></span>
+        <span style="--i: 6"
+          ><img src="./assets/img/nature6.jpg" alt=""
+        /></span>
+        <span style="--i: 7"
+          ><img src="./assets/img/nature8.jpg" alt=""
+        /></span>
+        <span style="--i: 8"
+          ><img
+            src="./assets/img/large_d7d1ed82-3e24-4dee-99f7-dabbbf866ec3.webp"
+            alt=""
+        /></span>
+      </div>
+      <div class="upload-part">
+        <button id="upload">Upload</button>
+        <input type="file" hidden id="fileInput" multiple />
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+  </body>
+</html>

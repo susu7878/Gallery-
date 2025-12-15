@@ -1,0 +1,272 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  padding: 30px 20px;
+  background: black;
+  box-shadow: 0 0 50px #0ef;
+  border-radius: 20px;
+  padding: 40px;
+  color: white;
+  overflow: hidden;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
+}
+
+.remember-box {
+  height: 250px;
+  max-width: 500px;
+  color: aliceblue;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #0ef;
+  width: 90%;
+  overflow: hidden;
+  display: none;
+}
+.remebr-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.hidden {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.reminder-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+.reminder-name,
+.lock {
+  width: 50%;
+}
+.remember-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.reminder-name h4 {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.r-name,
+.r-password {
+  border: #0ef 1px solid;
+  padding: 8px;
+  font-size: 10px;
+  border-radius: 10px;
+}
+.wrapper.active .form-wrapper.sign-in {
+  transform: translateY(-450px);
+}
+
+.wrapper .form-wrapper.sign-up {
+  position: absolute;
+  left: 0;
+  top: 450px;
+  left: 0;
+}
+.wrapper.active .form-wrapper.sign-up {
+  transform: translateY(-450px);
+}
+.wrapper:hover,
+.upload-part button:hover,
+.remember-box:hover {
+  animation: animate 1s linear infinite;
+}
+@keyframes animate {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+img {
+  width: 80px;
+  height: 180px;
+}
+
+@media (max-width: 480px) {
+  img {
+    width: 60px;
+    height: 120px;
+  }
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+.input-group {
+  position: relative;
+  border-bottom: white solid 1px;
+  margin: 30px 0;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -5px;
+}
+
+.input-group input {
+  color: white;
+  width: 320px;
+  height: 40px;
+  background-color: transparent;
+  padding: 0% 5px;
+  border: none;
+  outline: none;
+}
+
+.remember {
+  margin: -5px 0 15px 5px;
+}
+
+.remember label {
+  color: white;
+  font-size: 14px;
+}
+
+.remember input {
+  accent-color: #0ef;
+}
+
+button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #0ef;
+  box-shadow: 0 0 10px #0ef;
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  height: 40px;
+  /* margin: 20px 0; */
+}
+
+.signUp-link {
+  font-size: 14px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.signUp-link p {
+  color: white;
+}
+
+.signUp-link p a {
+  color: #0ef;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.signUp-link p a:hover {
+  text-decoration: underline;
+}
+/* gallry css */
+
+.tab > ul {
+  display: flex;
+  gap: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  border-bottom: 1px solid rgb(0, 247, 255);
+}
+li {
+  display: inline-block;
+}
+.hero {
+  display: none;
+}
+
+.upload-part {
+  margin-top: 100px;
+  text-align: center;
+}
+
+img {
+  width: 150px;
+  height: 250px;
+}
+#logoutBtn {
+  margin-top: 20px;
+}
+
+.container {
+  width: 100px;
+  height: 250px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: gallery 20s linear infinite;
+  cursor: pointer;
+}
+
+.container span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(200px);
+  -webkit-box-reflect: below 0.5px
+    linear-gradient(transparent, transparent, rgba(143, 53, 53, 0.486));
+}
+
+.container span img {
+  position: absolute;
+  border-radius: 10px;
+  /* border: 6px ridge #ccc; */
+  box-shadow: 0 0 10px rgb(6, 26, 29);
+}
+@keyframes gallery {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
